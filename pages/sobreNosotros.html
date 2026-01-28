@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="css/styles_index.css">
+    <!-- <link rel="stylesheet" href="css/styles_sn.css"> -->
+</head>
+
+
+
+<body>
+   
+        <!-- HEADER -->
+    <header class="header">
+      <a href="index.html"><img src= "img/Logo.jpg" alt="logo" class="imagen_logo"></a>
+      <input type="checkbox" id="check">
+      <label for="check" class="MostrarMenu">&#8801</label>
+        <nav class="menu">
+          <a href="index.html">Inicio</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="sobreNosotros.html">Sobre Nosotros</a>
+          <a href="contacto.html">Contacto</a>
+          <label for="check" class="ocultarMenu">&#215</label>
+        </nav>
+    </header>
+
+
+    <!-- BANNER -->
+    <main>
+        <section class="section_main">    
+            <div class="banner">
+                <img id="banner1" class="banner-img" src="img/m_v_v.jpeg" alt="Banner" />    
+                <div class="text_main-sn">        
+                <h2 class="main_title">SOBRE NOSOTROS</h2>
+                    </div>  
+            </div>
+        </section>
+
+       <section class="section_our"> 
+        <div class="our-carousel" id="our-carousel">
+          <div class="our_card active" style="background-image: url('img/vision_1.png');">
+            <div class="our_card_text">
+                <h3>Visión</h3>
+                <p>“ Ser una empresa líder en el mercado nacional, con servicios de alto valor agregado, que satisfacen las necesidades y expectativas de nuestros clientes".</p>
+            </div>
+          </div>
+          <div class="our_card" style="background-image: url('img/mision_1.jpg');">
+            <div class="our_card_text">
+                <h3>Misión</h3>
+                <p>Somos una empresa dedicada a la prestación de servicios profesionales en Reparación y Mantenimiento en Electrónica Industrial, integrada por profesionales con espíritu de empresa, comprometidos en la satisfacción total de nuestros clientes minimizando los índices de parada para maximizar los rendimientos en sus procesos. <br>Buscamos lograr nuevos niveles de éxito competitivo en cada categoría de negocios en los que competimos para beneficio de nuestros accionistas, de nuestros clientes, de nuestros trabajadores y de la comunidad en que operamos.</p>
+                </div>
+          </div>
+          <div class="our_card" style="background-image: url('img/valores_1.png');">
+            <div class="our_card_text">
+                <h3>Valores</h3>
+                <p>Trabajo en equipo, compromiso y calidad en el servicio.</p>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <script>
+const ourCards = document.querySelectorAll('#our-carousel .our_card');
+let ourCurrent = 0;
+function showOurCard(index) {
+  ourCards.forEach((card, i) => {
+    card.classList.toggle('active', i === index);
+  });
+}
+function nextOurCard() {
+  ourCurrent = (ourCurrent + 1) % ourCards.length;
+  showOurCard(ourCurrent);
+}
+showOurCard(ourCurrent);
+setInterval(nextOurCard, 6000);
+</script>
+
+        <section>
+            <div class="section_politian">
+               <div class="section_quality" style="background-image: url('img/qn_1.png')">
+                <div class="our_card-politian">
+                    <h3>Política de Calidad</h3>
+                    <p>" En TECNOTRONICA S.A.C. estamos  comprometidos a prestar servicios profesionales de Reparación, Mantenimiento y Asesoría en Electrónica Industrial de óptima calidad que satisfagan permanentemente las necesidades de  nuestros clientes, para lo cual utilizamos equipos apropiados, capacitamos y desarrollamos a nuestro personal dentro de un proceso de mejora continua de nuestras actividades ".</p>
+                </div>     
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+<!-- FOOTER -->
+        
+<footer class="footer" style="border-top: 5px solid gainsboro;">
+  
+  <div class="footer_division">
+    <h4>Contacto</h4>
+    <img src= "img/Logo.jpg" alt="logo" class="imagen_logo-footer">
+    <ul>
+      <li>
+        <div class="icon_footer">
+         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f"><path d="M162.57-180q-25.79 0-44.18-18.39T100-242.57v-474.86q0-25.79 18.39-44.18T162.57-780h634.86q25.79 0 44.18 18.39T860-717.43v474.86q0 25.79-18.39 44.18T797.43-180H162.57ZM480-468.51 150.26-684.36v441.79q0 5.39 3.46 8.85t8.85 3.46h634.86q5.39 0 8.85-3.46t3.46-8.85v-441.79L480-468.51Zm0-52.57 321.69-208.66H158.97L480-521.08ZM150.26-684.36v-45.38 487.17q0 5.39 3.46 8.85t8.85 3.46h-12.31v-454.1Z"/></svg>
+          <a href="mailto:gestion@tecnotronica.com">Gestion@tecnotronica.com</a>
+        </div>
+      </li>
+      <li>
+        <div class="icon_footer">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f"><path d="M776.13-140q-108.62 0-221.99-53.32T343.71-343.9q-97.07-97.25-150.39-210.43Q140-667.51 140-776.13q0-18.8 12.43-31.33Q164.85-820 183.49-820h119.57q15.48 0 26.52 10.09 11.03 10.09 15.01 25.71l23.54 110.68q2.18 15.55-1 27.52-3.18 11.97-11.85 20.13l-93.72 91.25q25.29 44.24 54.68 82.48 29.4 38.24 63.61 72.22 35.89 36.56 76.36 67.1 40.46 30.54 86.84 55.92l90.44-92.43q9.79-10.59 22.5-14.44 12.71-3.84 26.47-1.84l101.74 21.79q15.82 3.74 25.81 16 9.99 12.25 9.99 27.77v116.56q0 18.64-12.54 31.06Q794.93-140 776.13-140ZM236.97-580.97l78.83-76.16q1.66-1.54 2.24-4.23.58-2.69.06-5l-20.36-97.23q-.51-3.08-2.56-4.62-2.05-1.53-5.13-1.53h-94.2q-2.31 0-3.85 1.53-1.54 1.54-1.54 3.85 1.59 41.41 13.09 86.9 11.5 45.49 33.42 96.49Zm353.54 348q40.59 19.61 87.5 30.37 46.91 10.75 86.35 12.19 2.31 0 3.85-1.54 1.53-1.54 1.53-3.85v-93.48q0-3.08-1.53-5.13-1.54-2.05-4.62-2.56l-88.46-18.16q-2.31-.51-4.04.07-1.73.57-3.65 2.24l-76.93 79.85Zm-353.54-348Zm353.54 348Z"/></svg><a href="https://wa.me/51998784119?text=Bienvenido%20a%20Tecnotronica,%20en%20que%20podemos%20ayudarlo" target="_blank"> Teléfono: +51 998 784 119</a>
+      </div>
+      </li>
+
+    </ul>
+  </div>
+
+
+
+  <div class="footer_division">
+    <h4>Enlaces útiles</h4>
+    <ul>
+      <li>
+        <div class="icon_footer">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f"><path d="M244.62-100q-43.59 0-74.11-30.29Q140-160.58 140-203.85v-551.53q0-43.59 30.51-74.11Q201.03-860 244.62-860h417.94v602.56H244.62q-22.93 0-38.65 15.27-15.71 15.27-15.71 38.26t15.71 38.32q15.72 15.33 38.65 15.33h525.12V-780H820v680H244.62Zm93.33-207.69h274.36v-502.05H337.95v502.05Zm-50.26 0v-502.05h-43.07q-23.43 0-38.9 15.71-15.46 15.72-15.46 38.65v464.18q11.48-7.49 25.06-11.99 13.58-4.5 29.3-4.5h43.07Zm-97.43-502.05v518.54-518.54Z"/></svg><a href="sobreNosotros.html">Política de Calidad</a>
+        </div>
+        </li>
+
+        <li>
+          <div class="icon_footer">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#1f1f1f"><path d="M327.69-463.59h304.62v-50.26H327.69v50.26Zm0 115.38h304.62v-50.25H327.69v50.25Zm0 115.39h184.62v-50.26H327.69v50.26ZM242.57-100q-25.79 0-44.18-18.39T180-162.57v-634.86q0-25.79 18.39-44.18T242.57-860h337.58L780-660.15v497.58q0 25.79-18.39 44.18T717.43-100H242.57Zm312.46-536.51v-173.23H242.57q-4.62 0-8.47 3.84-3.84 3.85-3.84 8.47v634.86q0 4.62 3.84 8.47 3.85 3.84 8.47 3.84h474.86q4.62 0 8.47-3.84 3.84-3.85 3.84-8.47v-473.94H555.03ZM230.26-809.74v173.23-173.23 659.48-659.48Z"/></svg>
+          <a href="#">Términos de servicio</a>
+          </div>
+        </li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+
+
+  <div class="footer_division">
+    <h4>Síguenos en redes sociales</h4>
+    <ul>
+      <li>
+        <div class="icon_footer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32"><path d="M16,2c-7.732,0-14,6.268-14,14,0,6.566,4.52,12.075,10.618,13.588v-9.31h-2.887v-4.278h2.887v-1.843c0-4.765,2.156-6.974,6.835-6.974,.887,0,2.417,.174,3.043,.348v3.878c-.33-.035-.904-.052-1.617-.052-2.296,0-3.183,.87-3.183,3.13v1.513h4.573l-.786,4.278h-3.787v9.619c6.932-.837,12.304-6.74,12.304-13.897,0-7.732-6.268-14-14-14Z"></path></svg><a href="https://www.facebook.com/p/TECNOTRONICA-100067346409162">Facebook</a>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon_footer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M18.42,14.009L27.891,3h-2.244l-8.224,9.559L10.855,3H3.28l9.932,14.455L3.28,29h2.244l8.684-10.095,6.936,10.095h7.576l-10.301-14.991h0Zm-3.074,3.573l-1.006-1.439L6.333,4.69h3.447l6.462,9.243,1.006,1.439,8.4,12.015h-3.447l-6.854-9.804h0Z"></path></svg><a href="#">X-Twitter</a>
+        </div>
+      </li>
+
+      <li> 
+        <div class="icon_footer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32"><path d="M10.202,2.098c-1.49,.07-2.507,.308-3.396,.657-.92,.359-1.7,.84-2.477,1.619-.776,.779-1.254,1.56-1.61,2.481-.345,.891-.578,1.909-.644,3.4-.066,1.49-.08,1.97-.073,5.771s.024,4.278,.096,5.772c.071,1.489,.308,2.506,.657,3.396,.359,.92,.84,1.7,1.619,2.477,.779,.776,1.559,1.253,2.483,1.61,.89,.344,1.909,.579,3.399,.644,1.49,.065,1.97,.08,5.771,.073,3.801-.007,4.279-.024,5.773-.095s2.505-.309,3.395-.657c.92-.36,1.701-.84,2.477-1.62s1.254-1.561,1.609-2.483c.345-.89,.579-1.909,.644-3.398,.065-1.494,.081-1.971,.073-5.773s-.024-4.278-.095-5.771-.308-2.507-.657-3.397c-.36-.92-.84-1.7-1.619-2.477s-1.561-1.254-2.483-1.609c-.891-.345-1.909-.58-3.399-.644s-1.97-.081-5.772-.074-4.278,.024-5.771,.096m.164,25.309c-1.365-.059-2.106-.286-2.6-.476-.654-.252-1.12-.557-1.612-1.044s-.795-.955-1.05-1.608c-.192-.494-.423-1.234-.487-2.599-.069-1.475-.084-1.918-.092-5.656s.006-4.18,.071-5.656c.058-1.364,.286-2.106,.476-2.6,.252-.655,.556-1.12,1.044-1.612s.955-.795,1.608-1.05c.493-.193,1.234-.422,2.598-.487,1.476-.07,1.919-.084,5.656-.092,3.737-.008,4.181,.006,5.658,.071,1.364,.059,2.106,.285,2.599,.476,.654,.252,1.12,.555,1.612,1.044s.795,.954,1.051,1.609c.193,.492,.422,1.232,.486,2.597,.07,1.476,.086,1.919,.093,5.656,.007,3.737-.006,4.181-.071,5.656-.06,1.365-.286,2.106-.476,2.601-.252,.654-.556,1.12-1.045,1.612s-.955,.795-1.608,1.05c-.493,.192-1.234,.422-2.597,.487-1.476,.069-1.919,.084-5.657,.092s-4.18-.007-5.656-.071M21.779,8.517c.002,.928,.755,1.679,1.683,1.677s1.679-.755,1.677-1.683c-.002-.928-.755-1.679-1.683-1.677,0,0,0,0,0,0-.928,.002-1.678,.755-1.677,1.683m-12.967,7.496c.008,3.97,3.232,7.182,7.202,7.174s7.183-3.232,7.176-7.202c-.008-3.97-3.233-7.183-7.203-7.175s-7.182,3.233-7.174,7.203m2.522-.005c-.005-2.577,2.08-4.671,4.658-4.676,2.577-.005,4.671,2.08,4.676,4.658,.005,2.577-2.08,4.671-4.658,4.676-2.577,.005-4.671-2.079-4.676-4.656h0"></path></svg><a href="#">Instagram</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<section class="copyright">
+  <p>&copy; 2025 Tecnotronica. Todos los derechos reservados.</p>
+</section>
+
+
+</body>
+</html>
