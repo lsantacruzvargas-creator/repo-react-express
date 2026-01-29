@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import rateLimit from 'express-rate-limit';
 
 // Cargar variables de entorno
 dotenv.config();
@@ -26,6 +27,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Servir archivos estáticos
 // app.use(express.static(path.join(__dirname, '../public')));
 // app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+
+// Limita 10 peticiones por minuto
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minuto
+  max: 10, // máximo 10 peticiones
+  message: 'Demasiadas peticiones, intenta más tarde',
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+// Aplica globalmente a todas las rutas
+app.use(limiter);
+
 
 // Rutas de API
 
