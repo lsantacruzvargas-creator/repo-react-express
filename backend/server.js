@@ -28,6 +28,12 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 // Rutas de API
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Servidor funcionando correctamente' });
 });
